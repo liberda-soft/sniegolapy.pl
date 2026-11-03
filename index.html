@@ -3,23 +3,335 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex">
-  <title>Śniegołapy.pl – strona w przygotowaniu</title>
-  <style>
-    html, body { height: 100%; margin: 0; }
-    body {
-      display: grid; place-items: center; padding: 16px; box-sizing: border-box;
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-      background: #f4f6f8; color: #1d2733; text-align: center;
-    }
-    h1 { font-size: clamp(1.8rem, 6vw, 3rem); margin: 0 0 .5rem; }
-    p { margin: 0; color: #5a6672; font-size: 1.1rem; }
-  </style>
+  <title>Śniegołapy i płotki przeciwśniegowe – konfigurator | śniegołapy.pl</title>
+  <meta name="description" content="Skonfiguruj płotek przeciwśniegowy pod swój dach: blachodachówka, rąbek stojący, dachówka, karpiówka i pokrycia płaskie. 8 kolorów RAL, zestawienie elementów i szybka wycena. Ławy, stopnie i drabiny dachowe.">
+  <link rel="canonical" href="https://xn--niegoapy-bpb8v.pl/">
+  <meta name="theme-color" content="#101418">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:title" content="śniegołapy.pl – konfigurator płotków przeciwśniegowych">
+  <meta property="og:description" content="Dobierz śniegołapy do pokrycia i koloru dachu. Zestawienie elementów i wycena w jednym zapytaniu.">
+  <meta property="og:url" content="https://xn--niegoapy-bpb8v.pl/">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600;700&family=Caveat:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css?v=17">
 </head>
 <body>
-  <main>
-    <h1>Śniegołapy.pl</h1>
-    <p>Strona w przygotowaniu. Zapraszamy wkrótce.</p>
+  <a class="skip-link" href="#konfigurator">Przejdź do konfiguratora</a>
+
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a class="logo" href="#top" aria-label="śniegołapy.pl i więcej – strona główna">
+        <img class="logo-img" src="assets/img/logo.svg" alt="śniegołapy.pl" width="268" height="46">
+        <span class="logo-tag" aria-hidden="true">i więcej!</span>
+      </a>
+
+      <nav class="main-nav" data-nav aria-label="Nawigacja">
+        <a href="#konfigurator">Konfigurator</a>
+        <a href="#komunikacja">Komunikacja dachowa</a>
+        <a href="#jak-zamawiac">Jak zamawiać</a>
+        <a href="#kontakt">Kontakt</a>
+        <a href="#zapytanie" class="nav-cart" data-open-cart>Zapytanie <span class="cart-count" data-cart-count>0</span></a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="header-phone" data-contact-phone href="#kontakt"></a>
+        <button class="nav-toggle" type="button" aria-label="Otwórz menu" aria-expanded="false" data-nav-toggle>
+          <span></span><span></span>
+          <i class="toggle-count" data-cart-count>0</i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <h1 class="visually-hidden">Śniegołapy i płotki przeciwśniegowe dopasowane do Twojego dachu</h1>
+        <p class="eyebrow">Systemy przeciwśniegowe · Komunikacja dachowa</p>
+      </div>
+    </section>
+
+    <!-- KONFIGURATOR -->
+    <section id="konfigurator" class="configurator" aria-labelledby="cfg-title">
+      <div class="container">
+        <h2 id="cfg-title" class="visually-hidden">Konfigurator śniegołapów</h2>
+        <div class="cfg-grid">
+          <div class="cfg-visual">
+            <div class="card preview-card">
+              <div class="preview-svg" data-preview></div>
+            </div>
+          </div>
+
+          <div class="cfg-panel">
+            <section class="step step-roof" aria-labelledby="s1" data-dd>
+              <div class="pick-row">
+                <header class="step-head">
+                  <span class="step-num">01</span>
+                  <h3 id="s1">Pokrycie dachowe</h3>
+                </header>
+                <button class="dd-btn" type="button" aria-expanded="false" aria-controls="roof-list" data-dd-btn></button>
+              </div>
+              <div class="dd-list" id="roof-list">
+                <div class="dd-inner">
+                  <div class="dd-items" role="radiogroup" aria-labelledby="s1" data-roofs></div>
+                </div>
+              </div>
+              <div class="mount-note">
+                <div class="mount-detail-svg" data-detail></div>
+                <p><span class="mount-detail-kicker">Mocowanie</span> <strong class="mount-detail-name" data-detail-name></strong><span class="mount-detail-desc" data-detail-desc></span></p>
+              </div>
+            </section>
+
+            <section class="step" aria-labelledby="s2">
+              <header class="step-head">
+                <span class="step-num">02</span>
+                <h3 id="s2">Rodzaj płotka</h3>
+              </header>
+              <div class="system-grid" role="radiogroup" aria-labelledby="s2" data-systems></div>
+            </section>
+
+            <section class="step" aria-labelledby="s3">
+              <div class="ral-row">
+                <header class="step-head">
+                  <span class="step-num">03</span>
+                  <h3 id="s3">RAL</h3>
+                </header>
+                <div class="ral-dots" role="radiogroup" aria-labelledby="s3" data-colors></div>
+              </div>
+              <p class="ral-name" data-ral-name></p>
+            </section>
+
+            <section class="step" aria-labelledby="s4">
+              <header class="step-head">
+                <span class="step-num">04</span>
+                <h3 id="s4">Wymiary i warunki</h3>
+              </header>
+
+              <div class="slopes" data-slopes></div>
+              <button class="btn btn-ghost btn-sm add-slope" type="button" data-add-slope>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                Dodaj połać
+              </button>
+
+              <div class="conditions">
+                <div class="field">
+                  <span class="field-label" id="zone-label">Strefa obciążenia śniegiem</span>
+                  <div class="segmented" role="radiogroup" aria-labelledby="zone-label" data-zones></div>
+                  <p class="field-hint" data-zone-hint></p>
+                </div>
+                <div class="field">
+                  <label class="field-label" for="pitch">Kąt nachylenia dachu <output data-pitch-out></output></label>
+                  <input class="range" id="pitch" type="range" min="10" max="70" step="1" data-pitch>
+                  <div class="range-scale" aria-hidden="true"><span>10°</span><span>40°</span><span>70°</span></div>
+                </div>
+              </div>
+
+              <div class="reco" data-reco></div>
+            </section>
+
+            <div class="card summary-card" data-summary>
+              <div class="summary-head">
+                <h3>Zestawienie</h3>
+                <span class="summary-length" data-sum-length></span>
+              </div>
+              <table class="bom">
+                <thead><tr><th>Element</th><th>Ilość</th><th data-price-col>Wartość</th></tr></thead>
+                <tbody data-bom></tbody>
+              </table>
+              <div class="summary-total">
+                <span data-total-label>Wartość orientacyjna</span>
+                <strong data-total></strong>
+              </div>
+              <p class="summary-note" data-total-note>Cena brutto bez dostawy. Dokładną wycenę wyślemy po zapytaniu.</p>
+              <div class="summary-actions">
+                <button class="btn btn-accent btn-lg" type="button" data-add-config>Dodaj zestaw do zapytania</button>
+                <button class="btn btn-link" type="button" data-share>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                  Kopiuj link do tej konfiguracji
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KOMUNIKACJA DACHOWA -->
+    <section id="komunikacja" class="comms" aria-labelledby="comms-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Komunikacja dachowa</p>
+            <h2 id="comms-title">Ławy, stopnie i drabiny dachowe</h2>
+            <p class="section-lead">Bezpieczne poruszanie się po dachu – z uchwytami pod to samo pokrycie, które wybrałeś w konfiguratorze.</p>
+          </div>
+          <label class="roof-sync">
+            <span>Uchwyty pod pokrycie</span>
+            <select data-comms-roof></select>
+          </label>
+        </div>
+
+        <div class="filters" role="tablist" aria-label="Kategorie" data-filters></div>
+        <div class="product-grid" data-products></div>
+      </div>
+    </section>
+
+    <!-- JAK ZAMAWIAĆ -->
+    <section id="jak-zamawiac" class="how" aria-labelledby="how-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Jak zamawiać</p>
+            <h2 id="how-title">Trzy kroki do kompletnego zestawu</h2>
+          </div>
+        </div>
+        <ol class="how-steps">
+          <li>
+            <span class="how-num">1</span>
+            <h3>Skonfiguruj</h3>
+            <p>Wybierz pokrycie, kolor i wymiary. Dodaj płotki i komunikację dachową do jednego zapytania.</p>
+          </li>
+          <li>
+            <span class="how-num">2</span>
+            <h3>Wyślij zapytanie</h3>
+            <p>Zostaw kontakt. Sprawdzimy dobór uchwytów do Twojego pokrycia i rozstawu krokwi.</p>
+          </li>
+          <li>
+            <span class="how-num">3</span>
+            <h3>Odbierz ofertę</h3>
+            <p>Otrzymasz wycenę z kosztem dostawy. Po akceptacji kompletujemy i wysyłamy zestaw.</p>
+          </li>
+        </ol>
+
+        <div class="faq" data-faq>
+          <h3 class="faq-title">Najczęstsze pytania</h3>
+          <details>
+            <summary>Ile rzędów płotków potrzebuję?</summary>
+            <p>Zwykle wystarcza jeden rząd tuż nad ścianą zewnętrzną. Drugi rząd stosuje się przy długich połaciach (powyżej ok. 7&nbsp;m), dużym kącie nachylenia oraz w strefach śniegowych 3–5. Konfigurator podpowie liczbę rzędów na podstawie strefy i kąta dachu.</p>
+          </details>
+          <details>
+            <summary>Co oznacza 350/30 przy blachodachówce?</summary>
+            <p>Pierwsza liczba to moduł – odległość między przetłoczeniami w milimetrach. Druga to wysokość przetłoczenia (schodka). Obie wartości znajdziesz w karcie produktu pokrycia lub zmierzysz na dachu. Od nich zależy kształt uchwytu.</p>
+          </details>
+          <details>
+            <summary>Jaki rozstaw uchwytów jest prawidłowy?</summary>
+            <p>Orientacyjnie co 50–90&nbsp;cm – im większe obciążenie śniegiem i stromszy dach, tym gęściej. Przy dachówkach uchwyty mocuje się do krokwi, więc ostateczny rozstaw dopasowujemy do ich rozstawu.</p>
+          </details>
+          <details>
+            <summary>Czy montaż wymaga przewiercania pokrycia?</summary>
+            <p>Przy blasze na rąbek stojący – nie, uchwyty zaciskają się na rąbku. Przy dachówkach hak wsuwa się pod dachówkę. W blachodachówkach i pokryciach płaskich uchwyt przykręca się przez pokrycie z uszczelką.</p>
+          </details>
+          <details>
+            <summary>Jak wybrać kolor?</summary>
+            <p>Najczęściej płotek dobiera się w kolorze pokrycia, żeby był niewidoczny z ziemi. Podane oznaczenia RAL są orientacyjne – kolory na ekranie mogą się nieznacznie różnić od rzeczywistych.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- KONTAKT -->
+    <section id="kontakt" class="contact" aria-labelledby="contact-title">
+      <div class="container contact-inner">
+        <div>
+          <p class="eyebrow eyebrow-light">Kontakt</p>
+          <h2 id="contact-title">Nie wiesz, co wybrać?<br>Dobierzemy za Ciebie.</h2>
+          <p class="contact-lead">Wyślij zdjęcie dachu albo zadzwoń – pomożemy dobrać uchwyty, liczbę rzędów i kolor.</p>
+          <button class="btn btn-accent btn-lg" type="button" data-open-cart>Otwórz zapytanie</button>
+        </div>
+        <ul class="contact-list">
+          <li><span>Telefon</span><a data-contact-phone href="#"></a></li>
+          <li><span>E-mail</span><a data-contact-email href="#"></a></li>
+          <li class="contact-company"><span>Firma</span><p data-company-block></p></li>
+        </ul>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span data-year></span> śniegołapy.pl</span>
+      <p class="footer-legal" data-company-line></p>
+      <nav aria-label="Stopka">
+        <a href="#konfigurator">Konfigurator</a>
+        <a href="#komunikacja">Komunikacja dachowa</a>
+        <a href="#jak-zamawiac">Jak zamawiać</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Pasek na telefonie -->
+  <div class="mobile-bar" data-mobile-bar aria-hidden="true">
+    <div>
+      <span class="mobile-bar-label" data-mb-label></span>
+      <strong data-mb-total></strong>
+    </div>
+    <button class="btn btn-accent" type="button" data-add-config tabindex="-1">Dodaj do zapytania</button>
+  </div>
+
+  <!-- Zapytanie (szuflada) -->
+  <div class="drawer" data-drawer aria-hidden="true">
+    <div class="drawer-backdrop" data-close-cart></div>
+    <aside class="drawer-panel" role="dialog" aria-modal="true" aria-labelledby="drawer-title" tabindex="-1">
+      <header class="drawer-head">
+        <h2 id="drawer-title">Twoje zapytanie</h2>
+        <button class="icon-btn" type="button" aria-label="Zamknij" data-close-cart>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </header>
+
+      <div class="drawer-body">
+        <div class="cart-items" data-cart-items></div>
+
+        <form class="inquiry" data-form novalidate>
+          <h3>Dane do wyceny</h3>
+          <div class="form-grid">
+            <label class="input">
+              <span>Imię i nazwisko / firma</span>
+              <input name="name" type="text" autocomplete="name" required>
+            </label>
+            <label class="input">
+              <span>Telefon</span>
+              <input name="phone" type="tel" autocomplete="tel" required>
+            </label>
+            <label class="input">
+              <span>E-mail</span>
+              <input name="email" type="email" autocomplete="email" required>
+            </label>
+            <label class="input">
+              <span>Kod pocztowy</span>
+              <input name="zip" type="text" inputmode="numeric" autocomplete="postal-code" placeholder="00-000">
+            </label>
+            <label class="input input-full">
+              <span>Uwagi <em>(opcjonalnie)</em></span>
+              <textarea name="notes" rows="3" placeholder="Np. rozstaw krokwi, termin, zdjęcia dachu wyślę mailem"></textarea>
+            </label>
+          </div>
+          <label class="check">
+            <input name="consent" type="checkbox" required>
+            <span>Wyrażam zgodę na przetwarzanie moich danych w celu przygotowania oferty.</span>
+          </label>
+          <p class="form-error" data-form-error role="alert"></p>
+          <button class="btn btn-accent btn-lg btn-block" type="submit" data-submit>Wyślij zapytanie</button>
+        </form>
+
+        <div class="sent" data-sent hidden>
+          <div class="sent-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Dziękujemy!</h3>
+          <p data-sent-text>Zapytanie zostało przygotowane. Odezwiemy się z wyceną najszybciej, jak to możliwe.</p>
+          <button class="btn btn-ghost" type="button" data-close-cart>Wróć do strony</button>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <div class="toast" data-toast role="status" aria-live="polite"></div>
+
+  <script src="assets/js/data.js?v=17"></script>
+  <script src="assets/js/app.js?v=17"></script>
 </body>
 </html>
